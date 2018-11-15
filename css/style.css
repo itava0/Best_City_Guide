@@ -39,6 +39,11 @@ a {
 /* ---- Navigation---- */
 .name {
 	font-size: 1.25em;
+	margin:0;
+}
+
+.main-nav {
+	margin-top: 5px;
 }
 
 .name,
@@ -67,26 +72,45 @@ a {
 }
 
 /* ---- Layout Containers ---- */
-.container {
-  padding-left: 1em;
-  padding-right: 1em;
+.main-header {
+	padding-top: .5em;
+	padding-bottom:.5em;
 }
 
-.main-header {
-	padding-top: 1.5em;
-	padding-bottom: 1.5em;
+.banner {
+	color: #fff;
 	background: #3acec2;
-	margin-bottom: 30px;
+	padding: 3.2em 0;
+	margin-bottom: 60px;
+	text-align:center;
+}
+
+.col {
+	padding-right:1em;
+	padding-left: 1em;
 }
 
 .main-footer {
-  text-align: center;
-	padding: 2em 0;
+	text-align:center;
 	background: #d9e4ea;
+	padding: 2em 0;
+	margin-top: 30px;
 }
 
 /* ---- Page Elements ---- */
+.logo {
+	width: 190px;
+	margin-top:30px;
+}
 
+.headline {
+	margin-bottom: 0;
+}
+
+.tagline {
+	display:inline-block;
+	margin-bottom: 20px;
+}
 /* ================================= 
   Media Queries
 ==================================== */
@@ -118,18 +142,50 @@ a {
   }
   .col {
     float: left;
-    padding-left: 1em;
-    padding-right: 1em;
   }
- .primary{
-   width: 40%;
- }
- .secondary{
-   width: 60%;
+ .primary,
+ .secondary {
+   width: 50%;
  }
   .clearfix::after {
     content: " ";
     display: table;
     clear: both;
   }
+}
+
+@media (min-width: 1025px) {
+
+  .name{
+    float: left;
+  }
+
+	  .main-nav{
+    float: right;
+  }
+  .main-nav li{
+    float: left;
+    margin-left: 12px;
+  }
+  .col {
+    float: left;
+    padding-left: 1em;
+    padding-right: 1em;
+		margin-top: 3em;
+  }
+	.primary{
+		 width: 40%;
+	}
+	.secondary{
+		 width: 30%;
+	}
+	.tertiary{
+		 width: 30%;
+	}
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
 }
